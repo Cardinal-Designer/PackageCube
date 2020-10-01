@@ -42,9 +42,9 @@ for i in Package:
         child_data_url = basic_data_url + '@' + child_tag
         print("    下载子数据：",child_data_url)
 
-        child_data = requests.get(basic_data_url).text
+        child_data = requests.get(child_data_url).text
         with open(root + next_ + child_tag +".json",'w+') as f: # 保存子数据
-            f.write(basic_data)
+            f.write(child_data)
 
     
     
